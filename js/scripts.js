@@ -35,19 +35,24 @@ function mrRoboger(number) {
 $(document).ready(function() {
   $("#user-input").submit(function(event) {
     event.preventDefault();
+
     $("#resultList").empty();
     
     var userInput = parseInt($("#number").val());
 
-    if (verifyInput(userInput) === true) {
+    function findButton(clickedId){
+      console.log(clickedId);
+      return clickedId;
+    }
+
+    if (verifyInput(userInput) === true ) {
       var numberArray = mrRoboger(userInput);
-      
-      console.log(numberArray);
-      numberArray.forEach(function(value) {
-        console.log(value);
-        $("#resultList").append("<li>" + value + "</li>");
+      if (  "#count-forward") {
+          numberArray.forEach(function(value) {
+          console.log(value);
+          $("#resultList").append("<li>" + value + "</li>");
       })
-      
+    }
       $(".results").show();
     } else {
       $("#negativeError").modal({
