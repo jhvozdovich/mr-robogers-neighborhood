@@ -8,13 +8,12 @@ function verifyInput(number) {
   }
 }
 
-function countArray(number) {
+function mrRoboger(number) {
   var numbers = [];
 
   for (var i = 0; i < number + 1; i++) {
     var numberString = i.toString();
     var digitArray = numberString.split("");
-    console.log(digitArray);
     numbers.push(digitArray);
   }
 
@@ -30,7 +29,6 @@ function countArray(number) {
       numbers[index] = parseInt(digitArray.join(""));
     }
   })
-
   return numbers;
 }
 
@@ -43,11 +41,9 @@ $(document).ready(function() {
     var userInput = parseInt($("#number").val());
 
     if (verifyInput(userInput) === true) {
-      var numberArray = countArray(userInput);
-      
-      console.log(typeof((numberArray[1])[0]));
+      var numberArray = mrRoboger(userInput);
+    
       $("#results").html("<li>" + numberArray + "</li>");
-
       $(".results").show();
     }
   })
