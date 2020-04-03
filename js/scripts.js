@@ -10,26 +10,25 @@ function verifyInput(number) {
 
 function mrRoboger(number) {
   var numbers = [];
-
   for (var i = 0; i < number + 1; i++) {
     var numberString = i.toString();
     var digitArray = numberString.split("");
     numbers.push(digitArray);
   }
 
+  var finalArray = [];
   numbers.forEach(function(digitArray) {
-    var index = numbers.indexOf(digitArray);
     if (digitArray.includes("3")) {
-      numbers[index] = "Won't you be my neighbor?";
+      finalArray.push("Won't you be my neighbor?");
     } else if (digitArray.includes("2")) {
-      numbers[index] = "Boop!";
+      finalArray.push("Boop!");
     } else if (digitArray.includes("1")) {
-      numbers[index] = "Beep";
+      finalArray.push("Beep");
     } else {
-      numbers[index] = parseInt(digitArray.join(""));
+      finalArray.push(parseInt(digitArray.join("")));
     }
   })
-  return numbers;
+  return finalArray;
 }
 
 
@@ -37,7 +36,7 @@ function mrRoboger(number) {
 $(document).ready(function() {
   $("#user-input").submit(function(event) {
     event.preventDefault();
-    $("#results").empty();
+    $("#resultList").empty();
     
     var userInput = parseInt($("#number").val());
 
@@ -46,7 +45,8 @@ $(document).ready(function() {
       
       console.log(numberArray);
       numberArray.forEach(function(value) {
-        $("#results").append("<li>" + value + "</li>");
+        console.log(value);
+        $("#resultList").append("<li>" + value + "</li>");
       })
       
       $(".results").show();
