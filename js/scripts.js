@@ -37,13 +37,18 @@ function mrRoboger(number) {
 $(document).ready(function() {
   $("#user-input").submit(function(event) {
     event.preventDefault();
-
+    $("#results").empty();
+    
     var userInput = parseInt($("#number").val());
 
     if (verifyInput(userInput) === true) {
       var numberArray = mrRoboger(userInput);
-    
-      $("#results").html("<li>" + numberArray + "</li>");
+      
+      console.log(numberArray);
+      numberArray.forEach(function(value) {
+        $("#results").append("<li>" + value + "</li>");
+      })
+      
       $(".results").show();
     }
   })
