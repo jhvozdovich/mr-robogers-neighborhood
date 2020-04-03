@@ -22,7 +22,7 @@ function mrRoboger(number) {
     } else if (digitArray.includes("2")) {
       finalArray.push("Boop!");
     } else if (digitArray.includes("1")) {
-      finalArray.push("Beep");
+      finalArray.push("Beep!");
     } else {
       finalArray.push(parseInt(digitArray.join("")));
     }
@@ -59,20 +59,24 @@ $(document).ready(function() {
           $("#resultList").prepend("<p>" + value + "</p>");
         })
       }
-      $(".results").show();
       $(".intro").hide();
+      $(".results").fadeIn(1000);
     } else {
       $("#negativeError").modal({
         modal: true,
         autoOpen: false,
       })
-      $(".results").hide();
+      $(".results").fadeOut();
       $("#close").click(function() {
         $("#negativeError").modal("hide");
       })
     }
   })
+  $("#rules-button").click(function() {
+    $(".rules").slideToggle();
+  })
   $("#refresh").click(function() {
-    location.reload();
+    $(".results").hide();
+    $(".intro").fadeIn(1000);
   })
 })

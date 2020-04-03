@@ -48,7 +48,8 @@ Please contact me with any suggestions or questions at jhvozdovich@gmail.com. Th
 | **8- Evaluate rule: numbers that contain a ‘1’ all digits are replaced with “Beep!” (lowest priority)** | Array: “[’1’, ‘1’]” | Output: “Beep!” |
 | **9- If none of these rules are met, return the original number by joining the array and using parseInt** | Array: “[’5’, ‘0’]” | Output: “50 (number)” |
 | **10- Display an error if a negative number is entered** | Input: “-1” | Output: “Please enter a non-negative number.” |
-| **11 -Round down if a number is a decimal** | Input: “1.2” | Output: “1” |
+| **11- Round down if a number is a decimal** | Input: “1.2” | Output: “1” |
+| **12- Option to count backwards with prepend** | Input: “5” | Output: "5, 4, Won't you be my neighbor?, Boop!, Beep!, 0" |
 
 #### License
 
