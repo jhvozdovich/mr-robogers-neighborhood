@@ -33,6 +33,11 @@ function mrRoboger(number) {
 
 //User Interface Logic
 $(document).ready(function() {
+  var buttonPressed
+  $(".btn").click(function(){
+    buttonPressed = $(this).attr("name");
+  })
+
   $("#user-input").submit(function(event) {
     event.preventDefault();
 
@@ -40,19 +45,19 @@ $(document).ready(function() {
     
     var userInput = parseInt($("#number").val());
 
-    function findButton(clickedId){
-      console.log(clickedId);
-      return clickedId;
-    }
+    console.log("button pressed " + buttonPressed)
 
     if (verifyInput(userInput) === true ) {
       var numberArray = mrRoboger(userInput);
-      if (  "#count-forward") {
-          numberArray.forEach(function(value) {
-          console.log(value);
+      if (buttonPressed === "count-forward") {
+        numberArray.forEach(function(value) {
           $("#resultList").append("<li>" + value + "</li>");
-      })
-    }
+        })
+      } else if (buttonPressed === "count-backward") {
+        numberArray.forEach(function(value) {
+          $("#resultList").prepend("<li>" + value + "</li>");
+        })
+      }
       $(".results").show();
     } else {
       $("#negativeError").modal({
