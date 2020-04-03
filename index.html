@@ -6,7 +6,7 @@
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/scripts.js"></script>
-    <title>Mr. Roboger's Neighborhood</title>
+    <title>Mr. R.0.B.oger's Neighborhood</title>
   </head>
   <body>
     <div class="container">
@@ -15,12 +15,13 @@
         <div class="col-md-8">
           <div class="intro">
             <div class="panel panel-default">
-              <h1>Mr. Roboger's Neighborhood</h1>
+              <h1>Mr. R.0.B.oger's Neighborhood</h1>
               <button class="btn" id="rules-button">Need to see the rules?</button>
             </div>
             <div class="rules panel panel-default">
               <div class="panel-heading">
-                <p>Mr Roboger loves to count, but he does it a little funny!</p>
+                <p>Mr. R.0.B.oger loves to count, but he does it a little funny!</p>
+                <img src="./img/rob-happy.png" alt="The robot R.O.B., a Nintendo NES accessory.">
               </div>
               <div class="panel-body">
                 <ol>
@@ -37,16 +38,25 @@
                   <br>
                   <input id="number" type="number" required>
                 </div>
-                <button type="submit" class="btn" name="count-forward">Count with Mr. Roboger!</button>
-                <button type="submit" class="btn" name="count-backward">Count Backwards with Mr. Roboger!</button>
+                <button type="submit" class="btn" name="count-forward">Count with Mr. R.0.B.oger!</button>
+                <button type="submit" class="btn" name="count-backward">Count Backwards with Mr. R.0.B.oger!</button>
               </form>    
             </div>
           </div>  
           <div class="panel results">
-            <button class="btn" id="refresh">Play again?</button>
+            <button class="btn refresh">Play again?</button>
+            <div class="odd-number">
+              <p>You picked an odd number! Why are they called that? How ODD!</p>
+              <img src="./img/rob-scholar.png" alt="R.O.B. wearing Robin from Fire Emblem's outfit.">
+            </div>
+            <div class="even-number">
+              <p>You picked an even number! I hope you'll do EVEN better next time!</p>
+              <img src="./img/rob-counting.png" alt="R.O.B. counting cartridges.">
+            </div>
             <div id="resultList">
               <!--Fills from JavaScript-->
             </div>
+            <button class="btn refresh">Play again and not scroll back up?</button>
           </div>
         </div>
         <div class="col-md-2"></div>
@@ -56,7 +66,7 @@
           <div class="modal-content">
             <h3 class="modal-title">Error</h3>
             <div class="modal-body">
-              <p>Sorry, Mr. Roboger can't count negative numbers!</p>
+              <p>Sorry, Mr. R.0.B.oger can't count negative numbers!</p>
               <p>Try again!</p>
               <button id="close">Close</button>
             </div>

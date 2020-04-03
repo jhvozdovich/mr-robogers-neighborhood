@@ -71,11 +71,20 @@ $(document).ready(function() {
         $("#negativeError").modal("hide");
       })
     }
+
+    if (userInput % 2 !== 0) {
+      $(".odd-number").fadeIn(1000);
+      $(".even-number").hide();
+    } else if (userInput % 2 === 0) {
+      $(".even-number").fadeIn(1000);
+      $(".odd-number").hide();
+    }
   })
   $("#rules-button").click(function() {
     $(".rules").slideToggle();
   })
-  $("#refresh").click(function() {
+  $(".refresh").click(function() {
+    $(".rules").hide();
     $(".results").hide();
     $(".intro").fadeIn(1000);
   })
