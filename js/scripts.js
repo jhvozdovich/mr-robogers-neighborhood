@@ -46,8 +46,6 @@ $(document).ready(function() {
     
     var userInput = parseInt($("#number").val());
 
-    console.log("button pressed " + buttonPressed)
-
     if (verifyInput(userInput) === true ) {
       var numberArray = mrRoboger(userInput);
       if (buttonPressed === "count-forward") {
@@ -80,9 +78,11 @@ $(document).ready(function() {
       $(".odd-number").hide();
     }
   })
+
   $("#rules-button").click(function() {
     $(".rules").slideToggle();
   })
+  
   $(".refresh").click(function() {
     $(".rules").hide();
     $(".results").hide();
