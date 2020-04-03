@@ -1,4 +1,13 @@
 //Business Logic
+function verifyInput(number) {
+  if (number < 0) {
+    alert("Please enter a non-negative number!");
+    return false;
+  } else {
+    return true;
+  }
+}
+
 function countArray(number) {
   var numbers = [];
 
@@ -33,10 +42,13 @@ $(document).ready(function() {
 
     var userInput = parseInt($("#number").val());
 
-    var numberArray = countArray(userInput);
-    
-    console.log(typeof((numberArray[1])[0]));
-    $("#results").html("<li>" + numberArray + "</li>");
-    $(".results").show();
+    if (verifyInput(userInput) === true) {
+      var numberArray = countArray(userInput);
+      
+      console.log(typeof((numberArray[1])[0]));
+      $("#results").html("<li>" + numberArray + "</li>");
+
+      $(".results").show();
+    }
   })
 })
