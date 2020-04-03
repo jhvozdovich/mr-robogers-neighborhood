@@ -53,13 +53,9 @@ li {
   color: rgb(254, 255, 241);
 }
 
-ul {
-  list-style-type: none;
-  text-align: left;
-}
-
 .results {
   display: none;
+  margin-top: 3%;
 }
 
 .modal {
@@ -68,4 +64,8 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#refresh {
+  margin-bottom: 3%;
 }

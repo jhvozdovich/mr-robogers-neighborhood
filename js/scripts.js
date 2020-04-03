@@ -31,6 +31,7 @@ function mrRoboger(number) {
 }
 
 
+
 //User Interface Logic
 $(document).ready(function() {
   var buttonPressed
@@ -51,14 +52,15 @@ $(document).ready(function() {
       var numberArray = mrRoboger(userInput);
       if (buttonPressed === "count-forward") {
         numberArray.forEach(function(value) {
-          $("#resultList").append("<li>" + value + "</li>");
+          $("#resultList").append("<p>" + value + "</p>");
         })
       } else if (buttonPressed === "count-backward") {
         numberArray.forEach(function(value) {
-          $("#resultList").prepend("<li>" + value + "</li>");
+          $("#resultList").prepend("<p>" + value + "</p>");
         })
       }
       $(".results").show();
+      $(".intro").hide();
     } else {
       $("#negativeError").modal({
         modal: true,
@@ -69,5 +71,8 @@ $(document).ready(function() {
         $("#negativeError").modal("hide");
       })
     }
+  })
+  $("#refresh").click(function() {
+    location.reload();
   })
 })
