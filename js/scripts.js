@@ -4,11 +4,20 @@ function countArray(number) {
 
   for (var i = 0; i < number + 1; i++) {
     var numberString = i.toString();
-
-    var digitArray = numberString.split();
-
+    var digitArray = numberString.split("");
+    console.log(digitArray);
     numbers.push(digitArray);
   }
+
+  numbers.forEach(function(digitArray) {
+    var index = numbers.indexOf(digitArray);
+    if (digitArray.includes("3")) {
+      numbers[index] = "Won't you be my neighbor?";
+    } else {
+      numbers[index] = parseInt(digitArray.join(""));
+    }
+  })
+
   return numbers;
 }
 
