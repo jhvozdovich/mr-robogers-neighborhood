@@ -1,7 +1,6 @@
 //Business Logic
 function verifyInput(number) {
   if (number < 0) {
-    alert("Please enter a non-negative number!");
     return false;
   } else {
     return true;
@@ -50,6 +49,15 @@ $(document).ready(function() {
       })
       
       $(".results").show();
+    } else {
+      $(".modal").modal({
+        modal: true,
+        autoOpen: false,
+        button: { Ok: function(){
+          $(this).modal("close");
+        }
+      }
+      });
     }
   })
 })
