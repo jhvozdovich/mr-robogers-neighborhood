@@ -4,7 +4,10 @@ function countArray(number) {
 
   for (var i = 0; i < number + 1; i++) {
     var numberString = i.toString();
-    numbers.push(numberString);
+
+    var digitArray = numberString.split();
+
+    numbers.push(digitArray);
   }
   return numbers;
 }
@@ -19,7 +22,7 @@ $(document).ready(function() {
 
     var numberArray = countArray(userInput);
     
-    console.log(typeof(numberArray[1]));
+    console.log(typeof((numberArray[1])[0]));
     $("#results").html("<li>" + numberArray + "</li>");
     $(".results").show();
   })
