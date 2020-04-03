@@ -50,14 +50,14 @@ $(document).ready(function() {
       
       $(".results").show();
     } else {
-      $(".modal").modal({
+      $("#negativeError").modal({
         modal: true,
         autoOpen: false,
-        button: { Ok: function(){
-          $(this).modal("close");
-        }
-      }
-      });
+      })
+      $(".results").hide();
+      $("#close").click(function() {
+        $("#negativeError").modal("hide");
+      })
     }
   })
 })
