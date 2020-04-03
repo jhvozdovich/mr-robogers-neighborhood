@@ -13,6 +13,10 @@ function countArray(number) {
     var index = numbers.indexOf(digitArray);
     if (digitArray.includes("3")) {
       numbers[index] = "Won't you be my neighbor?";
+    } else if (digitArray.includes("2")) {
+      numbers[index] = "Boop!";
+    } else if (digitArray.includes("1")) {
+      numbers[index] = "Beep";
     } else {
       numbers[index] = parseInt(digitArray.join(""));
     }
