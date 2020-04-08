@@ -3,7 +3,7 @@
 ### _Arrays & Looping - Week 3 Project at Epicodus_
 
 #### Author: **_Jessica Hvozdovich_**
-#### April 3, 2020
+#### April 7, 2020
 
 ### Description
 
@@ -38,19 +38,23 @@ Please contact me with any suggestions or questions at jhvozdovich@gmail.com. Th
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **1- Create a form that accepts numerical user input** | User Input:”3” | JS Data: “ ‘3’ (a string)” |
-| **2- Convert the string value to an integer** | JS Data: "‘3’ (a string)" | Transformed Data: “3 (a number)” |
-| **3- Create an array of the all numbers between zero and the integer** | Transformed Data: “3” | Number Array: “[0, 1, 2, 3]” |
-| **4- Convert the array of numbers into an array of strings** | Number Array: “3” | String Array: “[‘0’, ‘1’, ‘2’, ‘3’]“ |
-| **5- Split each number string into an array of digits** | String Array: “[‘0’…’10’, ’11’, ’12’] | Array of arrays: “[[‘0’]…[’1’, ‘0’], [’1’, ‘1’],[’1’, ‘2’]]” |
-| **6- Evaluate rule: numbers that contain a ‘3’ all digits are replaced with “Won’t you be my neighbor?” (highest priority)** | Array: “[’1’, ‘3’]” | Output: “Won’t you be my neighbor?” |
-| **7- Evaluate rule: numbers that contain a ‘2’ all digits are replaced with “Boop!” (middle priority)** | Array: “[’1’, ‘2’]” | Output: “Boop!” |
-| **8- Evaluate rule: numbers that contain a ‘1’ all digits are replaced with “Beep!” (lowest priority)** | Array: “[’1’, ‘1’]” | Output: “Beep!” |
-| **9- If none of these rules are met, return the original number by joining the array and using parseInt** | Array: “[’5’, ‘0’]” | Output: “50 (number)” |
-| **10- Display an error if a negative number is entered** | Input: “-1” | Output: “Please enter a non-negative number.” |
-| **11- Round down if a number is a decimal** | Input: “1.2” | Output: “1” |
-| **12- Option to count backwards with prepend** | Input: “5” | Output: "5, 4, Won't you be my neighbor?, Boop!, Beep!, 0" |
-| **13- Different display image based on even and odd inputs** | Input: “5” | Output: "Wow an odd number" + odd.img |
+| **Returns a user input number** | User Input:”3” | Output: “3” |
+| **Displays a warning for blank fields** | User Input:”” | Output: “Please fill out this field” |
+| **Does not accept letter or special character input** | User Input:”Hello!” | Output: “(no display)" |
+| **Displays a warning for negative numbers** | User Input:”-11” | Output: “Mr. R.0.Boger can't count negative numbers!" |
+| **Returns a range of numbers from 0 to the user input** | User Input:”3” | Output: “0, 1, 2, 3” |
+| **Transforms a number containing a 3 to "Won't you be my neighbor?"** | User Input:”3” | Output: “Won't you be my neighbor?” |
+| **Transforms a number containing a 2 to "Boop!"** | User Input:”72” | Output: “Boop!” |
+| **Transforms a number containing a 1 to "Beep!"** | User Input:”11" | Output: “Beep!” |
+| **Creates hierarchy for number rules - 3 supersedes 1** | User Input:”31” | Output: “Won't you be my neighbor?” |
+| **Creates hierarchy for number rules - 2 supersedes 1** | User Input:”12” | Output: “Boop” |
+| **Creates hierarchy for number rules - 3 supersedes 2** | User Input:”23” | Output: “Won't you be my neighbor?” |
+| **Returns a range of numbers between 0 and the input with aforementioned transformations applied** | User Input:”6” | Output: “0, Beep!, Boop!, Won't you be my neighbor?, 4, 5, 6” |
+| **Displays the option to return to the starting screen and enter a new number** | User Input:”Play again?'” | Output: “Enter your number: ___” |
+| **Toggles display of rules** | User Input:”Click-Need to see the rules?” | Output: “Message describing the rules for numbers with digits 1, 2, or 3” |
+| **Counts count backwards or forwards depending on button clicked** | User Input:”6 + 'Count Backwards!'” | Output: “6, 5, 4, Won't you be my neighbor?, Boop!, Beep!, 0” |
+| **Displays an image and message for odd user inputs** | User Input:”7” | Output: “How odd!” |
+| **Displays an image and message for even user inputs** | User Input:”2” | Output: “Even better!” |
 
 #### License
 
