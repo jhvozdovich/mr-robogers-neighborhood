@@ -8,15 +8,10 @@ function verifyInput(number) {
 }
 
 function mrRoboger(number) {
-  var numbers = [];
+  var finalArray = [];
   for (var i = 0; i < number + 1; i++) {
     var numberString = i.toString();
     var digitArray = numberString.split("");
-    numbers.push(digitArray);
-  }
-
-  var finalArray = [];
-  numbers.forEach(function(digitArray) {
     if (digitArray.includes("3")) {
       finalArray.push("Won't you be my neighbor?");
     } else if (digitArray.includes("2")) {
@@ -26,7 +21,7 @@ function mrRoboger(number) {
     } else {
       finalArray.push(parseInt(digitArray.join("")));
     }
-  })
+  }
   return finalArray;
 }
 
